@@ -15,13 +15,13 @@ app.get('/create', async (req, res) => {
     res.json(createdUser);
 });
 
-// app.get('/update', async (req, res) => {
-//     let updatedUser = await userModel.findOneAndUpdate(
-//         { username: 'abid123' },
-//         { name: 'Abid Khan' },
-//         { returnDocument: 'after' });
-//     res.json(updatedUser);
-// });
+app.get('/update', async (req, res) => {
+    let updatedUser = await userModel.findOneAndUpdate(
+        { username: 'abid123' },
+        { name: 'Abid Khan' },
+        { returnDocument: 'after' });
+    res.json(updatedUser);
+});
 
 // app.get('/read', async (req, res) => {
 //     let users = await userModel.find({username: 'abid123'});
