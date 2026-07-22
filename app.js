@@ -23,10 +23,10 @@ app.get('/update', async (req, res) => {
     res.json(updatedUser);
 });
 
-// app.get('/read', async (req, res) => {
-//     let users = await userModel.find({username: 'abid123'});
-//     res.send(users);
-// });
+app.get('/read', async (req, res) => {
+    let users = await userModel.find({username: 'abid123'});
+    res.send(users);
+});
 
 // app.get('/delete', async (req, res) => {
 //     let users = await userModel.findOneAndDelete({username: 'abid123'});
