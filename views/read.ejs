@@ -13,17 +13,25 @@
     <a class="text-blue-500" href="/">To Home</a>
     <h1 class="text-2xl p-5">All Users</h1>
     <div class="flex flex-row gap-2">
-
-        <div class="w-44 bg-zinc-700 h-auto p-2 rounded-xl">
-            <div class="w-full bg-zinc-800 h-36 rounded-xl ">
-            </div>
-            <p>name</p>
-            <p>email</p>
-            <div class="pt-5 flex justify-around">
-                <a href="">Edit</a>
-                <a href="">Dlt</a>
-            </div>
-        </div>
+        <% if(users.length> 0){ %>
+            <% users.forEach(user=> { %>
+                <div class="w-44 bg-zinc-700 h-auto p-2 rounded-xl">
+                    <div class="w-40 h-40  rounded-xl ">
+                        <img src="<%=user.image%>" class="object-cover w-full h-full rounded-xl" alt="">
+                    </div>
+                    <p>Name: <%= user.name %>
+                    </p>
+                    <p>Email: <%=user.email%>
+                    </p>
+                    <div class="pt-5 flex justify-around">
+                        <a href="">Edit</a>
+                        <a href="/delete/<%= user._id%>">Dlt</a>
+                    </div>
+                </div>
+                <% }); %>
+                    <% } else{ %>
+                        <h3>No User Here</h3>
+                        <% } %>
     </div>
 </body>
 
