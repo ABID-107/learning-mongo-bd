@@ -6,14 +6,14 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-// app.get('/create', async (req, res) => {
-//     let createdUser = await userModel.create({
-//         name: 'Abidji',
-//         username: 'abidji123',
-//         email: 'abidji@gmail.com'
-//     });
-//     res.json(createdUser);
-// });
+app.get('/create', async (req, res) => {
+    let createdUser = await userModel.create({
+        name: 'Abidji',
+        username: 'abidji123',
+        email: 'abidji@gmail.com'
+    });
+    res.json(createdUser);
+});
 
 // app.get('/update', async (req, res) => {
 //     let updatedUser = await userModel.findOneAndUpdate(
