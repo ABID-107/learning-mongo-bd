@@ -28,9 +28,9 @@ app.get('/read', async (req, res) => {
     res.send(users);
 });
 
-// app.get('/delete', async (req, res) => {
-//     let users = await userModel.findOneAndDelete({username: 'abid123'});
-//     res.send(users);
-// });
+app.get('/delete', async (req, res) => {
+    let users = await userModel.findOneAndDelete({username: 'abid123'});
+    res.send(users);
+});
 
 app.listen(3000)
